@@ -30,7 +30,7 @@ function CreateScreen({navigation}) {
           senha: createPassword
         }
 
-        fetch("https://apps-a0a2d-default-rtdb.firebaseio.com/Main/.json", {
+        fetch("URL", {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ function HomeScreen({ navigation }) {
   const [textPassword, setTextPassword] = React.useState("");
   const [visiblePassword, setvisiblePassword] = React.useState(true);
   const nextButton = async () => {
-    const res = await fetch('https://apps-a0a2d-default-rtdb.firebaseio.com/Main/.json');
+    const res = await fetch('URL');
     const json = await res.json();
     for (const property in json) {
       //console.log(property + " = " + json[property].senha);
